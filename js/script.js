@@ -59,7 +59,6 @@ function run(){
 			calacas[i].dibujar(contextoBuffer);
 			calacas[i].actualizar();
 			if(quica.colision(calacas[i].x,calacas[i].y)){
-				quica.sprite = 2;
 				quica.vida--;
 				$('#pierde')[0].play();
 			}

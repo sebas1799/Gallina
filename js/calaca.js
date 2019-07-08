@@ -5,14 +5,14 @@ function aleatorio(piso,techo){
 function Calaca(x,y){
 	var opc = aleatorio(1,100) % 2;
 	if(opc==1)
-		this.img = $("#calaca_1")[0];	
+		this.img = $("#carro")[0];	
 	else
-		this.img = $("#calaca_2")[0];		
+		this.img = $("#camion")[0];		
 	this.x = aleatorio(0,620);
 	this.y = aleatorio(100,330);
 	this.velocidad = 0;
 	while(this.velocidad == 0)
-		this.velocidad=aleatorio(-3,3);
+		this.velocidad=aleatorio(0,3);
 			
 	this.dibujar = function(ctx){
 		var img = this.img;

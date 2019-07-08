@@ -3,7 +3,7 @@ function Quica(){
 	this.y = 15;
 	this.img = [$("#abajo")[0],$("#arriba")[0],$("#salto")[0],$("#sentado")[0]];
 	this.sprite = 0;
-	this.vida = 100;
+	this.vida = 1;
 	this.puntos = 0;
 	this.seguro = "arriba";
 	
@@ -16,12 +16,11 @@ function Quica(){
 		ctx.fillStyle = "#ffffff";
 		ctx.font = "12px sans-serif";
 		ctx.fillText("puntos: "+ this.puntos, x, y + 65);
-		ctx.fillText("vida: "+ this.vida, x, y);
+		ctx.fillText("POLLHOR", x, y);
 		ctx.fillText("ultimo seguro: "+ this.seguro, x, y+75);
 		if(this.sprite==2){
 			ctx.fillStyle = "#ff0000";
 			ctx.font = "20px sans-serif";
-			ctx.fillText("HEY!!!!", x+65, y + 25);
 		}
 		ctx.restore();
 	}
@@ -29,11 +28,11 @@ function Quica(){
 	this.actualizar = function(accion){
 		if(accion=="arriba" && this.y > 15){
 			this.y -= 10;
-			//this.sprite = 1;
+			this.sprite = 1;
 		}
 		if(accion=="abajo"  && this.y < 390){
 			this.y += 10;
-			//this.sprite = 0;
+			this.sprite = 0;
 		}
 		if(accion=="izquierda"){
 			this.x -= 10;
@@ -62,5 +61,9 @@ function Quica(){
 		   return false;
 		else
 		   return true;	
+	   if(distancia>this.img[this.sprite].height)
+		   return false;
+		else
+		   return true;
 	}
 }

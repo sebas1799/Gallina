@@ -1,6 +1,6 @@
 body {
 	background-color:#000000;
-	background:#000000 url('../imagenes/city.png') no-repeat right center;
+	background:#000000 url('../imagenes/pollos.png') no-repeat right center;
 	text-align: center;
 }
 
@@ -21,11 +21,11 @@ section {
 }
 
 canvas {
-	background:url('../imagenes/fondo.png');
+	background:url('../imagenes/carretera.png');
 	color:#ffffff;
 	border:2px solid;
 	border-color:#ffffff;
-	border-radius:15px;
+	border-radius:5px;
 }
 
 p {
@@ -37,7 +37,7 @@ button {
 	color:#555555;
 }
 
-#arriba, #abajo, #salto, #sentado, #calaca_1, #calaca_2 {
+#arriba, #abajo, #salto, #sentado, #carro, #camion {
 	display:none;
 }
 
